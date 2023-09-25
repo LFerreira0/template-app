@@ -1,0 +1,16 @@
+<header>
+    <div class="marca">
+        <img src="../../../assets/imagens/template-logo.png" alt="Logotipo genérico">
+    </div>
+    <nav *ngIf="menuAtivo">
+        <ul>
+            <li>Main</li>
+            <li>Stacks</li>
+            <li>Contatos</li>
+        </ul>
+    </nav>
+    <div *ngIf="mobile" class="menu-amburguer" (click)="menuAtivo = !menuAtivo"> 
+        <div class="barra" [class.upper-active]="menuAtivo"></div>
+        <div class="barra" [class.lower-active]="menuAtivo"></div>
+    </div>
+</header>   
