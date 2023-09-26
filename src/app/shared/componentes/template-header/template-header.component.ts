@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-template-header',
@@ -6,10 +6,12 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./template-header.component.scss']
 })
 export class TemplateHeaderComponent implements OnInit{
-
   menuAtivo = false;
   windowSize!: number;
   mobile !: boolean;
+
+  @Input() public menuAmburguer = false;
+  @Input() public logo = false;
 
   ngOnInit(): void {
     this.windowSize = window.innerWidth;
